@@ -5,5 +5,9 @@ function count(acc, value) {
   return acc + 1
 }
 
-const total = utils.reduce(count, 0, characters)
-console.log(total)
+function trace(v) {
+  console.log(v)
+  return v
+}
+
+utils.compose(trace, utils.reduce(count, 0))(characters)
