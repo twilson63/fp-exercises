@@ -3,7 +3,7 @@ const { curry } = require('ramda')
 module.exports = {
   forEach: forEach,
   map: curry(map),
-  filter: filter,
+  filter: curry(filter),
   reduce: log(curry(reduce), 'reduce is called'),
   compose: log(compose, 'compose is called')
 }
